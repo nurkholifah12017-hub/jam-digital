@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Segoe UI',sans-serif;
+
+    background:linear-gradient(
+        to bottom,
+        #0d47a1,
+        #42a5f5,
+        #90caf9
+    );
+
+    overflow:hidden;
+}
+
+/* Bulan */
+body::before{
+    content:"🌙";
+    position:absolute;
+    top:40px;
+    left:60px;
+    font-size:80px;
+    opacity:.9;
+}
+
+/* Bintang kecil */
+body::after{
+    content:"✦      ✦      ✦      ✦      ✦";
+    position:absolute;
+    top:50px;
+    width:100%;
+    text-align:center;
+    color:white;
+    opacity:.7;
+    font-size:18px;
+    letter-spacing:40px;
+}
+
+.cloud{
+    width:850px;
+    height:360px;
+
+    background:linear-gradient(
+        135deg,
+        #6fb4ff,
+        #3b82f6
+    );
+
+    border-radius:80px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.15),
+        0 0 40px rgba(255,255,255,.25);
+
+    backdrop-filter:blur(5px);
+}
+
+#tanggal{
+    color:white;
+    font-size:32px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+#jam{
+    color:white;
+    font-size:115px;
+    font-weight:700;
+    letter-spacing:4px;
+
+    text-shadow:
+        0 3px 8px rgba(0,0,0,.15);
+}
+
+.kedip{
+    animation:kedip 4s ease-in-out infinite;
+}
+
+@keyframes kedip{
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.5;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
